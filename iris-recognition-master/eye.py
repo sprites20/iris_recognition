@@ -344,7 +344,7 @@ class Ui_MainWindow(object):
             sidetext = "left" if self.radioButton.isChecked() else "right" if self.radioButton_2.isChecked() else "left"
             for i in folder_nums:
                 folder_num2[i] = self.get_folders("./enrolledimages/" + i + '/' + sidetext)
-            print(folder_num2[i])
+                print(folder_num2[i])
             try:
                 shutil.rmtree('./tempeye/')
                 os.mkdir('./tempeye')
@@ -359,7 +359,7 @@ class Ui_MainWindow(object):
                 for j in folder_num2[i]:
                     compare_binfiles('./tempeye/bin.bin', "./enrolledimages/" + i + '/' + sidetext + '/' + j + '/bin.bin')
             self.load_matches()
-            self.label_40.setPixmap(QtGui.QPixmap("./enrolledimages/" + i + '/' + sidetext + '/' + j + '/complete.jpg'))
+            #self.label_40.setPixmap(QtGui.QPixmap("./enrolledimages/" + i + '/' + sidetext + '/' + j + '/complete.jpg'))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
